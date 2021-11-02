@@ -71,7 +71,7 @@ var CanvasRenderer = function(el, options) {
 	 */
 	var drawCircle = function(color, lineWidth, percent) {
 		percent = Math.min(Math.max(-1, percent || 0), 1);
-		var isNegative = percent <= 0 ? true : false;
+		var isNegative = percent <= 0;
 
 		ctx.beginPath();
 		ctx.arc(0, 0, radius, 0, Math.PI * 2 * percent, isNegative);

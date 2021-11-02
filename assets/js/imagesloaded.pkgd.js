@@ -26,7 +26,7 @@
 
 	// Easy access to the prototype
 	var proto = EventEmitter.prototype,
-		nativeIndexOf = Array.prototype.indexOf ? true : false;
+		nativeIndexOf = !!Array.prototype.indexOf;
 
 	/**
 	 * Finds the index of the listener for the event in it's storage array.
